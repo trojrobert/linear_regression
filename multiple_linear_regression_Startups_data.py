@@ -39,6 +39,6 @@ prediction = linreg.predict(test_X)
 import statsmodels.formula.api as sm
 
 X =  np.append(arr =np.ones((50,1)),values = X,axis =1)
-X_opt = X [:, [0,1,3,4,5]]
+X_opt = X [:, [0,3]]
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
 regressor_OLS.summary()
